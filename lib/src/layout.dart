@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_lotto/src/widget/week_num.dart';
 import 'dart:convert' as convert;
 import 'package:http/http.dart' as http;
 
@@ -30,24 +31,16 @@ class _LayoutState extends State<Layout> {
 
     _lottoDrwNo = _lottoDrwNo + (difference ~/ 7);
 
-    print(difference);
-    print(difference ~/ 7);
-    print(_lottoDrwNo);
-
-    var url = Uri.parse(
-        "https://www.dhlottery.co.kr/common.do?method=getLottoNumber&drwNo=${_lottoDrwNo}");
-    http.Response response = await http.get(url);
+    http.Response response = await http.get(Uri.parse(
+        "https://www.dhlottery.co.kr/common.do?method=getLottoNumber&drwNo=${_lottoDrwNo}"));
 
     if (response.statusCode == 200) {
       setState(() {
         data = convert.jsonDecode(response.body) as Map<String, dynamic>;
       });
     } else {
-      _lottoDrwNo = (_lottoDrwNo - 1);
-
-      var url = Uri.parse(
-          "https://www.dhlottery.co.kr/common.do?method=getLottoNumber&drwNo=${_lottoDrwNo}");
-      http.Response response = await http.get(url);
+      response = await http.get(Uri.parse(
+          "https://www.dhlottery.co.kr/common.do?method=getLottoNumber&drwNo=${(_lottoDrwNo - 1)}"));
 
       setState(() {
         data = convert.jsonDecode(response.body) as Map<String, dynamic>;
@@ -63,7 +56,7 @@ class _LayoutState extends State<Layout> {
             appBar: AppBar(
               centerTitle: true,
               title: Text(
-                '${data['drwNo']} 회차 / 추첨일 : ${data['drwNoDate']}',
+                '${data['drwNo']} 회차',
               ),
               actions: [
                 IconButton(
@@ -76,6 +69,22 @@ class _LayoutState extends State<Layout> {
                   },
                   icon: Icon(Icons.refresh),
                 )
+              ],
+            ),
+            body: ListView(
+              children: [
+                WeeNumkWidget(
+                  data: data,
+                ),
+                // MainButtonWidget(),
+                SizedBox(height: 7),
+                // Container(
+                //   height: 60,
+                //   child: AdmobBanner(
+                //     adUnitId: adBannerUnitId,
+                //     adSize: AdmobBannerSize.BANNER,
+                //   ),
+                // ),
               ],
             ),
             bottomNavigationBar: BottomAppBar(
