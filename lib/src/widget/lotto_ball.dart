@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class LottoBallWidget extends StatelessWidget {
@@ -16,14 +15,14 @@ class LottoBallWidget extends StatelessWidget {
           ClipOval(
             child: Material(
               color: data['drwtNo1'] < 11
-                  ? Colors.yellow
+                  ? const Color(0xfffbc400)
                   : data['drwtNo1'] < 21
-                      ? Colors.blue
+                      ? const Color(0xff69c8f2)
                       : data['drwtNo1'] < 31
-                          ? Colors.red
+                          ? const Color(0xffff7272)
                           : data['drwtNo1'] < 41
-                              ? Colors.grey
-                              : Colors.green, // button color
+                              ? const Color(0xffaaa)
+                              : const Color(0xffb0d840), // button color
               child: Padding(
                 padding: const EdgeInsets.all(10.0),
                 child: InkWell(
@@ -43,14 +42,14 @@ class LottoBallWidget extends StatelessWidget {
           ClipOval(
             child: Material(
               color: data['drwtNo2'] < 11
-                  ? Colors.yellow
-                  : data['drwtNo2'] < 21
-                      ? Colors.blue
-                      : data['drwtNo2'] < 31
-                          ? Colors.red
-                          : data['drwtNo2'] < 41
-                              ? Colors.grey
-                              : Colors.green, // button color
+                  ? const Color(0xfffbc400)
+                  : data['drwtNo1'] < 21
+                      ? const Color(0xff69c8f2)
+                      : data['drwtNo1'] < 31
+                          ? const Color(0xffff7272)
+                          : data['drwtNo1'] < 41
+                              ? const Color(0xffaaa)
+                              : const Color(0xffb0d840), //olor
               child: Padding(
                 padding: const EdgeInsets.all(10.0),
                 child: InkWell(
@@ -70,14 +69,14 @@ class LottoBallWidget extends StatelessWidget {
           ClipOval(
             child: Material(
               color: data['drwtNo3'] < 11
-                  ? Colors.yellow
-                  : data['drwtNo3'] < 21
-                      ? Colors.blue
-                      : data['drwtNo3'] < 31
-                          ? Colors.red
-                          : data['drwtNo3'] < 41
-                              ? Colors.grey
-                              : Colors.green, // button color
+                  ? const Color(0xfffbc400)
+                  : data['drwtNo1'] < 21
+                      ? const Color(0xff69c8f2)
+                      : data['drwtNo1'] < 31
+                          ? const Color(0xffff7272)
+                          : data['drwtNo1'] < 41
+                              ? const Color(0xffaaa)
+                              : const Color(0xffb0d840), // button color
               child: Padding(
                 padding: const EdgeInsets.all(10.0),
                 child: InkWell(
@@ -97,14 +96,14 @@ class LottoBallWidget extends StatelessWidget {
           ClipOval(
             child: Material(
               color: data['drwtNo4'] < 11
-                  ? Colors.yellow
-                  : data['drwtNo4'] < 21
-                      ? Colors.blue
-                      : data['drwtNo4'] < 31
-                          ? Colors.red
-                          : data['drwtNo4'] < 41
-                              ? Colors.grey
-                              : Colors.green, // button color
+                  ? const Color(0xfffbc400)
+                  : data['drwtNo1'] < 21
+                      ? const Color(0xff69c8f2)
+                      : data['drwtNo1'] < 31
+                          ? const Color(0xffff7272)
+                          : data['drwtNo1'] < 41
+                              ? const Color(0xffaaa)
+                              : const Color(0xffb0d840), // button color
               child: Padding(
                 padding: const EdgeInsets.all(10.0),
                 child: InkWell(
@@ -124,14 +123,14 @@ class LottoBallWidget extends StatelessWidget {
           ClipOval(
             child: Material(
               color: data['drwtNo5'] < 11
-                  ? Colors.yellow
-                  : data['drwtNo5'] < 21
-                      ? Colors.blue
-                      : data['drwtNo5'] < 31
-                          ? Colors.red
-                          : data['drwtNo5'] < 41
-                              ? Colors.grey
-                              : Colors.green, // button color
+                  ? const Color(0xfffbc400)
+                  : data['drwtNo1'] < 21
+                      ? const Color(0xff69c8f2)
+                      : data['drwtNo1'] < 31
+                          ? const Color(0xffff7272)
+                          : data['drwtNo1'] < 41
+                              ? const Color(0xffaaa)
+                              : const Color(0xffb0d840), // button color
               child: Padding(
                 padding: const EdgeInsets.all(10.0),
                 child: InkWell(
@@ -151,14 +150,14 @@ class LottoBallWidget extends StatelessWidget {
           ClipOval(
             child: Material(
               color: data['drwtNo6'] < 11
-                  ? Colors.yellow
-                  : data['drwtNo6'] < 21
-                      ? Colors.blue
-                      : data['drwtNo6'] < 31
-                          ? Colors.red
-                          : data['drwtNo6'] < 41
-                              ? Colors.grey
-                              : Colors.green, // button color
+                  ? const Color(0xfffbc400)
+                  : data['drwtNo1'] < 21
+                      ? const Color(0xff69c8f2)
+                      : data['drwtNo1'] < 31
+                          ? const Color(0xffff7272)
+                          : data['drwtNo1'] < 41
+                              ? const Color(0xffaaa)
+                              : const Color(0xffb0d840), // button color
               child: Padding(
                 padding: const EdgeInsets.all(10.0),
                 child: InkWell(
@@ -181,7 +180,7 @@ class LottoBallWidget extends StatelessWidget {
                   child: Icon(
                     Icons.add,
                     size: 20,
-                    color: Colors.red,
+                    color: const Color(0xffff7272),
                   ),
                 ),
           data['bnusNo'] == null
@@ -189,14 +188,14 @@ class LottoBallWidget extends StatelessWidget {
               : ClipOval(
                   child: Material(
                     color: data['bnusNo'] < 11
-                        ? Colors.yellow
-                        : data['bnusNo'] < 21
-                            ? Colors.blue
-                            : data['bnusNo'] < 31
-                                ? Colors.red
-                                : data['bnusNo'] < 41
-                                    ? Colors.grey
-                                    : Colors.green, // button color
+                        ? const Color(0xfffbc400)
+                        : data['drwtNo1'] < 21
+                            ? const Color(0xff69c8f2)
+                            : data['drwtNo1'] < 31
+                                ? const Color(0xffff7272)
+                                : data['drwtNo1'] < 41
+                                    ? const Color(0xffaaa)
+                                    : const Color(0xffb0d840), // button color
                     child: Padding(
                       padding: const EdgeInsets.all(10.0),
                       child: InkWell(

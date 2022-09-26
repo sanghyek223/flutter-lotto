@@ -14,14 +14,20 @@ class WeeNumkWidget extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
+          Text('${data['drwNo']} 회 당첨결과'),
+          Text('${data['drwNo']}'),
           Text(
-            '총 상금액 : ' +
-                PriceUtils.calcStringToWon(data['totSellamnt'].toString()),
+            '1등 총 당첨금 : ' +
+                PriceUtils.calcStringToWon(
+                  data['totSellamnt'].toString(),
+                ),
             style: TextStyle(fontSize: 17, fontWeight: FontWeight.bold),
           ),
           Text(
             '1등 상금액 : ' +
-                PriceUtils.calcStringToWon(data['firstWinamnt'].toString()),
+                PriceUtils.calcStringToWon(
+                  data['firstWinamnt'].toString(),
+                ),
             style: TextStyle(fontSize: 17, fontWeight: FontWeight.bold),
           ),
           Text(
